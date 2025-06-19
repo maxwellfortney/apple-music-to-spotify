@@ -25,6 +25,8 @@
             "source.fixAll": "explicit",
             "source.organizeImports": "explicit"
         },
-        "editor.defaultFormatter": "biomejs.biome"
+        "editor.defaultFormatter": "biomejs.biome",
+        "search.useIgnoreFiles": true,
+        "search.useParentIgnoreFiles": true
     }
 }
