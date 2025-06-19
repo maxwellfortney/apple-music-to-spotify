@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "name": "root",
+            "path": "."
+        },
+        {
+            "name": "nextjs",
+            "path": "./apps/nextjs"
+        },
+        {
+            "name": "nestjs",
+            "path": "./apps/nestjs"
+        },
+        {
+            "name": "ui",
+            "path": "./packages/ui"
+        }
+    ],
+    "settings": {
+        "typescript.preferences.includePackageJsonAutoImports": "on",
+        "typescript.suggest.autoImports": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "biomejs.biome"
+    }
+}

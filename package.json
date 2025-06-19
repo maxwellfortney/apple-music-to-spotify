@@ -1,21 +1,31 @@
 {
-  "name": "shadcn-ui-monorepo",
-  "version": "0.0.1",
+  "name": "monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "clean:dist": "pnpm rimraf \"**/dist\" --glob",
+    "clean:node_modules": "pnpm dlx rimraf \"**/node_modules\" --glob",
+    "clean:turbo": "pnpm dlx rimraf \"**/.turbo\" --glob",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:fix": "biome check --write",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "pnpm lint:fix",
+    "**/package.json": "sort-package-json"
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*",
+    "@biomejs/biome": "2.0.0",
     "@workspace/typescript-config": "workspace:*",
-    "prettier": "^3.5.1",
-    "turbo": "^2.4.2",
-    "typescript": "5.7.3"
+    "husky": "9.1.7",
+    "lint-staged": "16.1.2",
+    "rimraf": "6.0.1",
+    "sort-package-json": "3.2.1",
+    "turbo": "2.5.4",
+    "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": ">=20"
   }

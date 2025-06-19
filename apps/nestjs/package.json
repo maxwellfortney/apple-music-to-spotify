@@ -1,0 +1,33 @@
+{
+    "name": "nestjs",
+    "version": "0.0.1",
+    "private": true,
+    "description": "NestJS API",
+    "license": "UNLICENSED",
+    "author": "",
+    "scripts": {
+        "build": "nest build",
+        "debug": "nest start --debug --watch",
+        "dev": "nest start --watch",
+        "lint": "biome check src",
+        "lint:fix": "biome check --apply src",
+        "start": "nest start",
+        "start:prod": "node dist/main"
+    },
+    "dependencies": {
+        "@nestjs/common": "11.1.3",
+        "@nestjs/core": "11.1.3",
+        "@nestjs/platform-express": "11.1.3",
+        "reflect-metadata": "0.2.2",
+        "rxjs": "7.8.2"
+    },
+    "devDependencies": {
+        "@nestjs/cli": "11.0.7",
+        "@nestjs/schematics": "11.0.5",
+        "@tailwindcss/postcss": "4.1.10",
+        "@types/express": "5.0.3",
+        "@types/node": "catalog:",
+        "@workspace/typescript-config": "workspace:*",
+        "typescript": "catalog:"
+    }
+}
