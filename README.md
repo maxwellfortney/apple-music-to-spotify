@@ -41,6 +41,27 @@ cd apps/nextjs && pnpm dev
 cd apps/nestjs && pnpm dev
 ```
 
+## Hosting and Domain Configuration
+
+Both the frontend and backend applications need to be hosted on separate domains/subdomains. These domains must be configured in the respective developer consoles:
+
+### Required Domains
+
+- **Frontend Domain**: `https://frontend.mydomain.com` (Next.js app)
+- **Backend Domain**: `https://backend.mydomain.com` (NestJS API)
+
+### Developer Console Configuration
+
+Configure your domains in the following developer consoles:
+
+- **Spotify Developer Console**: Add your frontend domain to redirect URIs
+- **Apple Developer Console**: Configure associated domains and universal links
+- **Google Console** (if using Google OAuth): Add authorized redirect URIs
+
+### Environment Variables Update
+
+After setting up your domains, update your environment files with the production URLs. See the `packages/env/src/` directory for the exact environment variables needed.
+
 ## iOS Shortcut Setup
 
 To enable "Open in Crossfade" in your iOS share menu, create a custom shortcut:
