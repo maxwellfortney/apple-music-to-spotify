@@ -1,31 +1,55 @@
-# shadcn/ui monorepo template
+# Crossfade - Apple Music to Spotify Queue Manager
 
-This template is for creating a monorepo with shadcn/ui.
+Crossfade is a web application that allows Apple Music users to manage a Spotify user's queue. This enables seamless music sharing and queue management across different music platforms.
 
-## Usage
+## Getting Started
 
+### Prerequisites
+
+- Node.js (v18 or higher)
+- pnpm
+- Spotify Developer Account
+- Apple Music API access
+
+### Installation
+
+1. Clone the repository:
 ```bash
-pnpm dlx shadcn@latest init
+git clone <repository-url>
+cd <dir>
 ```
 
-## Adding components
-
-To add components to your app, run the following command at the root of your `web` app:
-
+2. Install dependencies:
 ```bash
-pnpm dlx shadcn@latest add button -c apps/web
+pnpm install
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+3. Set up environment variables:
 
-## Tailwind
+Create the following environment files with the required variables. See the `packages/env/src/` directory for the exact environment variables needed:
 
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+- `apps/nextjs/.env.local` - Next.js environment variables
+- `apps/nestjs/.env` - NestJS environment variables
 
-## Using components
+4. Start the development servers:
+```bash
+# Start both frontend and backend
+pnpm dev
 
-To use the components in your app, import them from the `ui` package.
+# Or start individually
+cd apps/nextjs && pnpm dev
+cd apps/nestjs && pnpm dev
+```
 
-```tsx
-import { Button } from "@workspace/ui/components/button"
+## Project Structure
+
+```
+├── apps/
+│   ├── nextjs/          # Frontend application
+│   └── nestjs/          # Backend API
+├── packages/
+│   ├── ui/              # Shared UI components"
+│   ├── types/           # Shared TypeScript types
+│   ├── env/             # Environment configuration
+│   └── typescript-config/ # TypeScript configurations
 ```
