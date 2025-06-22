@@ -9,7 +9,7 @@ Crossfade is a web application that allows Apple Music users to manage a Spotify
 - Node.js (v18 or higher)
 - pnpm
 - Spotify Developer Account
-- Apple Music API access
+- Apple Developer Account
 
 ### Installation
 
@@ -40,6 +40,31 @@ pnpm dev
 cd apps/nextjs && pnpm dev
 cd apps/nestjs && pnpm dev
 ```
+
+## iOS Shortcut Setup
+
+To enable "Open in Crossfade" in your iOS share menu, create a custom shortcut:
+
+### Creating the Shortcut
+
+1. Open the **Shortcuts** app on your iOS device
+2. Create a new shortcut with these actions:
+   - **Get Input** (URL type)
+   - **URL** action with your Crossfade base URL: `https://your-domain.com/share?songUrl=`
+   - **Combine Text** to merge the base URL with the input
+   - **Open URL** to launch the combined URL
+
+### Adding to Share Menu
+
+1. In the Shortcuts app, tap the shortcut you created
+2. Tap the share button and select **"Add to Share Sheet"**
+3. Customize when it appears (e.g., only for URLs)
+
+### Usage
+
+1. Open Apple Music and find a song you want to share
+2. Tap the share button and select your "Open in Crossfade" shortcut
+3. The song will open in Crossfade for queue management
 
 ## Project Structure
 
